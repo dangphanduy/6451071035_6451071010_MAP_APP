@@ -1,6 +1,6 @@
-import '../data/services/login_auth_service.dart';
-import '../data/models/user_model.dart';
 import 'package:get/get.dart';
+import 'package:map_app_6451071035_6451071010/data/services/login_auth_service.dart';
+import 'package:map_app_6451071035_6451071010/data/models/user_model.dart';
 class AuthController extends GetxController {
   final AuthService _authService = AuthService();
   UserModel? currentUser;

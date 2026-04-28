@@ -1,5 +1,5 @@
-import 'package:draf_project/controller/register_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:map_app_6451071035_6451071010/controllers/register_controller.dart';
 import '../../common/widgets/primary_button.dart';
 import '../../common/widgets/social_login_button.dart';
 import '../../utils/validators.dart';
