@@ -23,6 +23,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     Navigator.pushReplacementNamed(context, AppRoutes.home);
   }
 
+  void _goToLogin() {
+    Navigator.pushReplacementNamed(context, AppRoutes.login);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: controller.isLastPage()
-                      ? PrimaryButton(title: 'Bắt đầu', onPressed: _goToHome)
+                      ? PrimaryButton(title: 'Bắt đầu', onPressed: _goToLogin)
                       : PrimaryButton(
                     title: 'Tiếp theo',
                     onPressed: () {

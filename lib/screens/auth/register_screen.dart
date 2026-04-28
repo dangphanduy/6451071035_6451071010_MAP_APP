@@ -46,6 +46,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ).showSnackBar(SnackBar(content: Text(error)));
       return;
     }
+    // Hiển thị thông báo thành công
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Đăng ký thành công! Vui lòng xác thực email của bạn.'),
+        duration: Duration(seconds: 2),
+      ),
+    );
+    // Chuyển đến trang xác thực email
     Navigator.pushNamed(
       context,
       AppRoutes.verifyEmail,
