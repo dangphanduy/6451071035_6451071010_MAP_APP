@@ -35,8 +35,7 @@ class ResetEmailSentScreen extends StatelessWidget {
                   );
                 },
               ),
-              TextButton(onPressed: () {}, child: const Text('Gửi lại
-                email')),
+              TextButton(onPressed: () {}, child: const Text('Gửi lại email')),
                 ],
               ),
               ),

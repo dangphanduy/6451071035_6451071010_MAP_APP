@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import '../data/services/register_auth_service.dart';
-import '../data/models/user_model.dart';
+import 'package:map_app_6451071035_6451071010/data/services/register_auth_service.dart';
+import 'package:map_app_6451071035_6451071010/data/models/user_model.dart';
 class RegisterController {
   final AuthService _authService = AuthService();
   Future<String?> register({

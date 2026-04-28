@@ -9,10 +9,10 @@ class AuthService {
       String password,
       ) async {
     try {
-      UserCredential credential = await _auth.signInWithEmailAndPassword
-      email: email,
-    password: password,
-    );
+      UserCredential credential = await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
     User? firebaseUser = credential.user;
     if (firebaseUser == null) {
     throw Exception('Không tìm thấy người dùng');
@@ -27,7 +27,7 @@ class AuthService {
     if (!userDoc.exists) {
     throw Exception('Không tìm thấy dữ liệu người dùng');
     }
-    Map<String, dynamic> data = userDoc.data() as Map<String, dynamic>
+    Map<String, dynamic> data = userDoc.data() as Map<String, dynamic>;
     UserModel userModel = UserModel.fromMap(data);
     return userModel;
     } on FirebaseAuthException catch (e) {

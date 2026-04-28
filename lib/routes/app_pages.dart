@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import '../views/splash/splash_screen.dart';
-import '../views/onboarding/onboarding_screen.dart';
+import '../screens/splash/splash_screen.dart';
+import '../screens/onboarding/onboarding_screen.dart';
 import '../bindings/splash_binding.dart';
 import '../bindings/onboarding_binding.dart';
 import 'app_routes.dart';

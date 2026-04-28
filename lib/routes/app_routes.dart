@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:map_app_6451071035_6451071010/views/onboarding/onboarding_screen.dart';
-import '../views/splash/splash_screen.dart';
-
+import '../screens/splash/splash_screen.dart';
+import '../screens/onboarding/onboarding_screen.dart';
+import '../screens/auth/forget_password_screen.dart';
+import '../screens/auth/login_screen.dart';
+import '../screens/auth/register_screen.dart';
+import '../screens/auth/register_success_screen.dart';
+import '../screens/auth/reset_email_sent_screen.dart';
+import '../screens/auth/verify_email_screen.dart';
+import '../screens/home/home_screen.dart';
 class AppRoutes {
   static const String splash = '/';
   static const String onboarding = '/onboarding';
@@ -15,7 +21,6 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String publisher = '/publisher';
   static const String updateAccount = '/update-account';
-
   static const String changeName = '/change-name';
   static const String changeUsername = '/change-username';
   static const String changePassword = '/change-password';
@@ -28,9 +33,22 @@ class AppRoutes {
   static const String myOrderview = '/my-order';
   static const String myShippingAddressview = '/my_shipping_address';
   static const String myBankAccountview = '/my_bank_account';
-
   static Map<String, WidgetBuilder> routes = {
     splash: (context) => const SplashScreen(),
     onboarding: (context) => const OnboardingScreen(),
+    home: (context) => const HomeScreen(),
+    register: (context) => const RegisterScreen(),
+    login: (context) => const LoginScreen(),
+    forgetPassword: (context) => ForgetPasswordScreen(),
+    verifyEmail: (context) {
+      final String email = ModalRoute.of(context)!.settings.arguments as
+      String;
+      return VerifyEmailScreen(email: email);
+    },
+    registerSuccess: (context) => const RegisterSuccessScreen(),
+    resetEmailSent: (context) {
+      final email = ModalRoute.of(context)!.settings.arguments as String;
+      return ResetEmailSentScreen(email: email);
+    },
   };
 }
