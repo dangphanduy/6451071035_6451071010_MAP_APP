@@ -24,7 +24,7 @@ class RegisterSuccessScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  'Chào mừng! Tài khoản của bạn đã sẵn sàng để sử dụng.',
+                  'Chào mừng! Tài khoản của bạn đã sẵn sàng để sử dụng. Vui lòng kiểm tra email để xác thực tài khoản của bạn.',
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 32),
