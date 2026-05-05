@@ -27,7 +27,10 @@ class AuthService {
     if (!userDoc.exists) {
     throw Exception('Không tìm thấy dữ liệu người dùng');
     }
-    Map<String, dynamic> data = userDoc.data() as Map<String, dynamic>;
+    Map<String, dynamic> data = Map<String, dynamic>.from(
+      userDoc.data() as Map<String, dynamic>,
+    );
+    data['id'] ??= firebaseUser.uid;
     UserModel userModel = UserModel.fromMap(data);
     return userModel;
     } on FirebaseAuthException catch (e) {

@@ -37,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: _goToHome,
+                onPressed: _goToLogin,
                 child: const Text('Bỏ qua'),
               ),
             ),
