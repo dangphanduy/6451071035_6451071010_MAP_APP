@@ -16,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen>
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final AuthController authController = Get.put(AuthController());
+  final AuthController authController = Get.find<AuthController>();
   bool isPasswordHidden = true;
   bool rememberMe = false;
   // Hiệu ứng cho các phần tử xuất hiện
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-// Hiệu ứng Gradient cho nền
+            // Hiệu ứng Gradient cho nền
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
@@ -203,8 +203,7 @@ class _LoginScreenState extends State<LoginScreen>
                                   validator: (value) =>
                                       Validators.validatePassword(value ?? ''),
                                 ),
-                                const SizedBox(height: 12),
-// Ghi nhớ & Quên mật khẩu
+                                const SizedBox(height: 12), // Ghi nhớ & Quên mật khẩu
                                 Row(
                                   children: [
                                     SizedBox(

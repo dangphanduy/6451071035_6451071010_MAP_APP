@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:map_app_6451071035_6451071010/screens/bank_account/my_bank_account_screen.dart';
+import 'package:map_app_6451071035_6451071010/screens/cart_overview_screen.dart';
 import 'package:map_app_6451071035_6451071010/screens/home/main_navigation_screen.dart';
+import 'package:map_app_6451071035_6451071010/screens/order/my_order_screen.dart';
+import 'package:map_app_6451071035_6451071010/screens/order/order_overview_screen.dart';
 import 'package:map_app_6451071035_6451071010/screens/profile/change_dateofbirth_screen.dart';
 import 'package:map_app_6451071035_6451071010/screens/profile/change_email_screen.dart';
 import 'package:map_app_6451071035_6451071010/screens/profile/change_gender_screen.dart';
@@ -49,10 +52,8 @@ class AppRoutes {
   static Map<String, WidgetBuilder> routes = {
     splash: (context) => const SplashScreen(),
     onboarding: (context) => const OnboardingScreen(),
-    home: (context) => const MainNavigationScreen(),
     register: (context) => const RegisterScreen(),
     login: (context) => const LoginScreen(),
-    forgetPassword: (context) => ForgetPasswordScreen(),
     forgetPassword: (context) => ForgetPasswordScreen(),
     home: (context) => const MainNavigationScreen(),
     updateAccount: (context) => const UpdateAccountScreen(),
@@ -63,6 +64,9 @@ class AppRoutes {
     changePhoneNumber: (context) => const ChangePhoneNumberScreen(),
     changeGender: (context) => const ChangeGenderScreen(),
     changeDateofBirth: (context) => const ChangeDateOfBirthScreen(),
+    cartOverview: (context) => const CartOverviewScreen(),
+    orderOverview: (context) => const OrderReviewScreen(),
+    myOrderview: (context) => const MyOrderScreen(),
     myShippingAddressview: (context) => MyShippingAddressScreen(),
     myBankAccountview: (context) => MyBankAccountScreen(),
     verifyEmail: (context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'home_screen.dart';
 import '../profile/profile_screen.dart';
 import '../mystore/mystore_screen.dart';
@@ -33,18 +34,23 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 currentIndex = index;
               });
             },
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'My store',
+              icon: const Icon(Icons.home),
+              label: 'nav.home'.tr,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border),
-              label: 'Wishlist',
+              icon: const Icon(Icons.business),
+              label: 'nav.store'.tr,
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label:
-            'Profile'),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.favorite_border),
+              label: 'nav.wishlist'.tr,
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.person),
+              label: 'nav.profile'.tr,
+            ),
           ],
         ),
     );
